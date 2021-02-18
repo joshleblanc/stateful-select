@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
+  config.hosts << "3000.code.monolith.sh"
   config.session_store :cache_store,
     key: "_harness_development",
     compress: true,

@@ -23,3 +23,10 @@ group :development do
   gem 'listen', '~> 3.2'
   gem 'standard'
 end
+
+gem "view_component_reflex", "~> 3.1"
+gem "random_name_generator", "~> 1.2"
+
+gem "view_component", require: "view_component/engine"
+
+gem "jbuilder", "~> 2.11"

@@ -1,5 +1,15 @@
-<button data-reflex="click->Example#test">Test</button>
+<%= render SelectComponent.new(multiple: true, url: "/persons/filter.json", html_options: { data: { reflex: "change->Example#filter" }}) %>
 
-<% if @stimulus_reflex %>
-  <h1>Success! Random: <%= (rand * 100).to_i %></h1>
-<% end %>
+<table>
+<thead>
+  <tr>
+  <th>Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @persons.each do |person| %>
+    <tr>
+      <td><%= person.name %></td>
+    </tr>
+  <% end %>
+  </tbody>
