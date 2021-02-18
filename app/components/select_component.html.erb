@@ -1,0 +1,3 @@
+<%= component_controller class: @class_name, data: {"select-url": @url, "select-value": @value, "select-clearable": @clearable, "select-creatable": @creatable, "select-multiple": @multiple} do %>
+    <%= select_tag @field, @options, {**@rest, class: "form-control", **@html_options} %>
+<% end %>
